@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="min-h-screen bg-woodsmoke-1000">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@yield('title')</title>
+    <meta name="description" content="@yield('description')" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="yandex-verification" content="" />
+    <meta name="google-site-verification" content="" />
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+
+<body class="font-sans antialiased text-woodsmoke-400 relative bg-[#F1F3F9] text-[#132238]">
+    @include('common/header')
+    <main id="top">
+        @yield('content')
+    </main>
+    <!-- @include('common/footer')
+    @include('common/form')
+    @include('common/icons')
+    @env('production')
+        @include('common/metrika')
+    @endenv -->
+</body>
+
+</html>
