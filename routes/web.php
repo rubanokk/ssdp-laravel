@@ -1,10 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
 
 Route::localize(function () {
     Route::view('/', 'home.index');
+    Route::get('/', [HomeController::class, 'index']);
     Route::resource('posts', PostsController::class);
 });
 

@@ -1,6 +1,6 @@
 <header class="site-header">
     <div class="header-inner">
-        <a aria-label="SSD Partners" class="brand" href="#top">
+        <a aria-label="SSD Partners" class="brand" href="/">
             <div class="brand-text">
                 <strong>SSD PARTNERS</strong>
                 <span>International Legal Advisory</span>
@@ -15,8 +15,6 @@
         </nav>
         <div class="header-actions">
             <div aria-label="Language switch" class="lang-switch">
-                <!-- <a class="active" href="https://ssdp.legal/">EN</a>
-                <a class="" href="https://ssdp.legal/ru">RU</a> -->
                 @foreach (config('localizer.supported_locales') as $locale)
                 <a href="{{ Route::localizedSwitcherUrl($locale) }}" @class(['active'=> app()->getLocale() ===
                     $locale])>

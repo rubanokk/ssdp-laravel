@@ -17,8 +17,6 @@
                     </div>
                 </div>
                 <div class="mt-8 content-text">{!! $post->content !!}</div>
-                <div class="mt-16 text-2xl font-medium mb-4">Читайте так же</div>
-                @each('posts/post-row', $posts, 'post')
             </div>
         </div>
     </div>

@@ -32,8 +32,8 @@ class PostFormPage extends FormPage
             Box::make([
                 ID::make(),
                 Translatable::make('Title', 'title')
-                    ->priorityLanguages(['en', 'ru'])->compact(),
-                Translatable::make('Content', 'content')->tinyMce()->priorityLanguages([config('app.locale'), config('app.fallback_locale')])->compact(),
+                    ->priorityLanguages(['en', 'ru']),
+                Translatable::make('Content', 'content')->tinyMce()->priorityLanguages(['en', 'ru']),
                 // TinyMce::make('Текст', 'content')->locale('ru')->addOption('sandbox_iframes_exclusions', 'vkvideo.ru'),
             ]),
         ];

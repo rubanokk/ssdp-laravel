@@ -14,11 +14,9 @@
                 <span class="eyebrow-dot"></span>
                 SSD Partners • TAMCHY • MUNICH • DUBAI • NEW YORK
             </div>
-            <h1>Cross-border legal strategy with <span class="gradient-text">global perspective</span>.</h1>
+            <h1>{!! __('hero.title') !!}</h1>
             <p>
-                SSD Partners combines international deal-making experience with a premium, business-first approach.
-                We advise founders, corporates, investors and family offices on transactions, disputes and strategic
-                growth across key financial centres.
+                {!! __('hero.description') !!}
             </p>
             <div class="hero-cta">
                 <a class="btn btn-primary" href="#expertise">View practices</a>
@@ -314,12 +312,8 @@
                 private capital, digital assets and developments affecting international investors.
             </p>
         </div>
-        <div class="publications-grid" style="grid-template-columns:minmax(0,720px);">
-            <article class="publication-card reveal visible">
-                <div class="publication-meta">
-                    <span>Tamchy SFIT · Client Alert</span>
-                    <span>August 2026</span>
-                </div>
+        <div class="publications-grid" style="grid-template-columns:repeat(2, 1fr); gap:24px">
+            <!-- <article class="publication-card reveal visible">
                 <h3>Tamchy SFIT: Kyrgyzstan Launches a New Common-Law Financial Hub on Issyk-Kul</h3>
                 <p>
                     An overview of the new Special Financial Investment Territory “Tamchy”: its common-law-based
@@ -330,7 +324,8 @@
                     href="https://ssdp.legal/publications-1">
                     Read publication
                 </a>
-            </article>
+            </article> -->
+             @each('posts/post-row', $posts, 'post')
         </div>
     </div>
 </section>
@@ -386,5 +381,33 @@
         </div>
     </div>
 </section>
+<script>
+    const reveals = document.querySelectorAll('.reveal');
 
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.14});
+
+    reveals.forEach((el, index) => {
+      if (!el.classList.contains('visible')) observer.observe(el);
+    });
+  </script>
+<script>
+  (function () {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('sent') === '1') {
+        var form = document.getElementById('ssd-contact-form');
+        var success = document.getElementById('contact-success');
+        if (form) form.style.display = 'none';
+        if (success) success.style.display = 'block';
+      }
+    } catch (e) {}
+  })();
+</script>
 @endsection
