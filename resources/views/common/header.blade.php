@@ -7,11 +7,11 @@
             </div>
         </a>
         <nav class="nav">
-            <a href="#expertise">Practices</a>
-            <a href="#presence">Global Presence</a>
-            <a href="#approach">Expertise</a>
-            <a href="#publications">Publications</a>
-            <a href="#contact">Contact</a>
+            <a href="/#expertise">Practices</a>
+            <a href="/#presence">Global Presence</a>
+            <a href="/#approach">Expertise</a>
+            <a href="/#publications">Publications</a>
+            <a href="/#contact">Contact</a>
         </nav>
         <div class="header-actions">
             <div aria-label="Language switch" class="lang-switch">

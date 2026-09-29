@@ -14,7 +14,7 @@
                 <span class="eyebrow-dot"></span>
                 SSD Partners • TAMCHY • MUNICH • DUBAI • NEW YORK
             </div>
-            <h1>{!! __('hero.title') !!}</h1>
+            <h1 class="font-bold">{!! __('hero.title') !!}</h1>
             <p>
                 {!! __('hero.description') !!}
             </p>
@@ -312,19 +312,7 @@
                 private capital, digital assets and developments affecting international investors.
             </p>
         </div>
-        <div class="publications-grid" style="grid-template-columns:repeat(2, 1fr); gap:24px">
-            <!-- <article class="publication-card reveal visible">
-                <h3>Tamchy SFIT: Kyrgyzstan Launches a New Common-Law Financial Hub on Issyk-Kul</h3>
-                <p>
-                    An overview of the new Special Financial Investment Territory “Tamchy”: its common-law-based
-                    legal framework, tax and customs treatment, currency and migration advantages, institutional
-                    structure and the regulatory framework developing around the new financial centre.
-                </p>
-                <a aria-label="Read the Tamchy SFIT Client Alert online" class="publication-link"
-                    href="https://ssdp.legal/publications-1">
-                    Read publication
-                </a>
-            </article> -->
+        <div class="grid lg:grid-cols-2 gap-6">
              @each('posts/post-row', $posts, 'post')
         </div>
     </div>
@@ -342,35 +330,29 @@
                 substantive work.
             </p>
             <div aria-label="SSD Partners contact form" class="contact-form-wrap">
-                <form action="https://formsubmit.co/info@ssdp.legal" class="contact-form" id="ssd-contact-form"
+                <form action="https://formsubmit.co/info@ssdp.legal" class="contact-form" id="lead-form"
                     method="POST">
-                    <input name="_subject" type="hidden" value="New SSD Partners website enquiry">
-                    <input name="_template" type="hidden" value="table">
-                    <input name="_next" type="hidden" value="https://ssdp.legal/?sent=1#contact">
-                    <input name="_url" type="hidden" value="https://ssdp.legal/">
-                    <input aria-hidden="true" autocomplete="off" name="_honey"
-                        style="position:absolute;left:-10000px;opacity:0;pointer-events:none;" tabindex="-1"
-                        type="text">
+
                     <div class="form-field">
                         <label for="contact-name">Name</label>
-                        <input autocomplete="name" id="contact-name" name="name" placeholder="Your name" required=""
+                        <input autocomplete="name" id="lead-name" name="name" placeholder="Your name" required=""
                             type="text">
                     </div>
                     <div class="form-field">
                         <label for="contact-email">Email</label>
-                        <input autocomplete="email" id="contact-email" name="email" placeholder="you@example.com"
+                        <input autocomplete="email" id="lead-email" name="email" placeholder="you@example.com"
                             required="" type="email">
                     </div>
                     <div class="form-field">
                         <label for="contact-message">How can we help?</label>
-                        <textarea id="contact-message" maxlength="3000" name="message"
+                        <textarea id="lead-message" maxlength="3000" name="message"
                             placeholder="Tell us briefly about your matter" required=""></textarea>
                     </div>
                     <p class="form-note">Your enquiry will be treated confidentially. Please do not include highly
                         sensitive information at this initial stage.</p>
                     <button class="btn btn-primary form-submit" type="submit">Send message</button>
                 </form>
-                <div class="contact-success" id="contact-success" role="status">
+                <div class="hidden" id="lead-message-success" role="status">
                     Thank you. Your enquiry has been sent. A member of SSD Partners will review it and respond using
                     the contact details you provided.
                 </div>
@@ -397,17 +379,4 @@
       if (!el.classList.contains('visible')) observer.observe(el);
     });
   </script>
-<script>
-  (function () {
-    try {
-      var params = new URLSearchParams(window.location.search);
-      if (params.get('sent') === '1') {
-        var form = document.getElementById('ssd-contact-form');
-        var success = document.getElementById('contact-success');
-        if (form) form.style.display = 'none';
-        if (success) success.style.display = 'block';
-      }
-    } catch (e) {}
-  })();
-</script>
 @endsection

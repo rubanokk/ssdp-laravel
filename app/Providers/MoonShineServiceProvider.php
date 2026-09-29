@@ -11,6 +11,7 @@ use MoonShine\Laravel\DependencyInjection\MoonShineConfigurator;
 use App\MoonShine\Resources\MoonShineUser\MoonShineUserResource;
 use App\MoonShine\Resources\MoonShineUserRole\MoonShineUserRoleResource;
 use App\MoonShine\Resources\Post\PostResource;
+use App\MoonShine\Resources\Leads\LeadsResource;
 
 class MoonShineServiceProvider extends ServiceProvider
 {
@@ -24,6 +25,7 @@ class MoonShineServiceProvider extends ServiceProvider
                 MoonShineUserResource::class,
                 MoonShineUserRoleResource::class,
                 PostResource::class,
+                LeadsResource::class,
             ])
             ->pages([
                 ...$core->getConfig()->getPages(),

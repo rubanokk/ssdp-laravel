@@ -3,11 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\LeadsController;
 
 Route::localize(function () {
     Route::view('/', 'home.index');
     Route::get('/', [HomeController::class, 'index']);
     Route::resource('posts', PostsController::class);
+    Route::post('/leads', [LeadsController::class, 'store']);
 });
 
 // Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
