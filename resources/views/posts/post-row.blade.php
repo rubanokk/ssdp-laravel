@@ -1,6 +1,6 @@
-<article class="publication-card reveal visible">
-    <h3>{{ $post->title }}</h3>
-    <a aria-label="{{ $post->title }}" href="/posts/{{ $post->slug  }}">
-        Read publication
+<article class="">
+    <a aria-label="{{ $post->title }}" href="/posts/{{ $post->slug  }}" class="inline text-2xl font-medium border-b border-[#004AFF]">
+        {{ $post->title }}
     </a>
+    <div class="mt-8">{{ \Carbon\Carbon::parse($post->created_at)->isoFormat('D MMMM YYYY') }}</div>
 </article>

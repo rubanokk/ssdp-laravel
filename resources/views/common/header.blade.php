@@ -1,29 +1,43 @@
-<header class="site-header">
-    <div class="header-inner">
-        <a aria-label="SSD Partners" class="brand" href="/">
-            <div class="brand-text">
-                <strong>SSD PARTNERS</strong>
-                <span>International Legal Advisory</span>
-            </div>
-        </a>
-        <nav class="nav">
-            <a href="/#expertise">Practices</a>
-            <a href="/#presence">Global Presence</a>
-            <a href="/#approach">Expertise</a>
-            <a href="/#publications">Publications</a>
-            <a href="/#contact">Contact</a>
-        </nav>
-        <div class="header-actions">
-            <div aria-label="Language switch" class="lang-switch">
-                @foreach (config('localizer.supported_locales') as $locale)
-                <a href="{{ Route::localizedSwitcherUrl($locale) }}" @class(['active'=> app()->getLocale() ===
-                    $locale])>
-                    {{ strtoupper($locale) }}
-                </a>
-                @endforeach
-            </div>
-
-            <a class="btn btn-primary" href="#contact">Start a conversation</a>
+<header class="sticky inset-x-0 top-0 z-2 bg-[#F8FAFE]">
+    <div class="max-w-300 mx-auto h-30 flex items-center justify-between">
+        <div class="flex items-center gap-20">
+            <a href="/" class="">
+                <div class="uppercase font-bold">SSD PARTNERS</div>
+            </a>
+            <ul class="hidden lg:flex justify-center gap-10">
+                <li><a href="#">Practices</a></li>
+                <li><a href="#">Global Presence</a></li>
+                <li><a href="#">Expertise</a></li>
+                <li><a href="#">Publications</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
+        <div class="flex items-center gap-7">
+            
+            <div class="flex items-center gap-1 text-lg">
+                <a href="{{ Route::localizedSwitcherUrl('en') }}" @class(['opacity-50'=> app()->getLocale() === 'en'])>
+                    EN
+                </a>
+                <span>|</span>
+                <a href="{{ Route::localizedSwitcherUrl('ru') }}" @class(['opacity-50'=> app()->getLocale() === 'ru'])>
+                    RU
+                </a>
+            </div>
+            <div
+                class="flex justify-center items-center h-12 px-4 border border-[#B5CBF6] rounded">
+                Start a conversation</div>
+        </div>
+
+
     </div>
 </header>
+
+<div id="mobile-menu"
+    class="hidden fixed top-18 left-0 right-0 bottom-0 backdrop-blur-xl bg-woodsmoke-950/40 z-80 text-xl">
+    <ul class="flex flex-col justify-center items-center mt-16">
+        <li><a href="/#about" class="block py-4 px-4">Почему мы</a></li>
+        <li><a href="/#price" class="block py-4 px-4">Стоимость</a></li>
+        <li><a href="/#works" class="block py-4 px-4">Портфолио</a></li>
+        <li><a href="/#contacts" class="block py-4 px-4">Контакты</a></li>
+    </ul>
+</div>

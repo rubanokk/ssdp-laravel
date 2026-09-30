@@ -16,13 +16,13 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans antialiased text-woodsmoke-400 relative bg-[#F1F3F9] text-[#132238]">
+<body class="flex flex-col min-h-screen">
     @include('common/header')
     <main id="top">
         @yield('content')
     </main>
-    <!-- @include('common/footer')
-    @include('common/form')
+    @include('common/footer')
+    <!-- @include('common/form')
     @include('common/icons')
     @env('production')
         @include('common/metrika')
