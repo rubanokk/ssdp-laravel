@@ -24,11 +24,9 @@
                 </a>
             </div>
             <div
-                class="flex justify-center items-center h-12 px-4 border border-[#B5CBF6] rounded">
+                class="js-toggle-form flex justify-center items-center h-12 px-4 border border-[#B5CBF6] rounded cursor-pointer">
                 Start a conversation</div>
         </div>
-
-
     </div>
 </header>
 

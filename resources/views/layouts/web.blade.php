@@ -22,9 +22,9 @@
         @yield('content')
     </main>
     @include('common/footer')
-    <!-- @include('common/form')
+    @include('common/form')
     @include('common/icons')
-    @env('production')
+    <!-- @env('production')
         @include('common/metrika')
     @endenv -->
 </body>

@@ -34,6 +34,7 @@ $(function () {
 
 
     $form.on('submit', function () {
+        console.log('submit')
 
         let isValid = true
 
@@ -46,6 +47,12 @@ $(function () {
             $email.addClass('error')
             isValid = false
         }
+
+        if ($message.val().length === 0) {
+            $message.addClass('error')
+            isValid = false
+        }
+        
 
         if (!isValid || isInProgress) return false
 
