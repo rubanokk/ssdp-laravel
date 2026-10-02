@@ -31,7 +31,7 @@ class LeadEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Form from ssdp.legal',
+            subject: 'ssdp.legal form',
         );
     }
 

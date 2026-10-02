@@ -43,7 +43,7 @@
 
         <div id="lead-message-success" class="hidden text-center mt-8">
             Thank you. Your enquiry has been sent. A member of SSD Partners will review it and respond using the contact details you provided.
-            <div class="js-toggle-form inline-block mt-4 border-b border-white cursor-pointer">Close</div>
+            <div class="js-toggle-form inline-block mt-4 border-b border-black cursor-pointer">Close</div>
         </div>
     </div>
 </div>
