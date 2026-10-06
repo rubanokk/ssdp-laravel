@@ -7,4 +7,6 @@ return [
     'publications' => 'Публикации',
     'contacts' => 'Контакты',
     'conversation_btn' => 'Начать диалог',
+    'publications & insights' => 'Публикации и аналитика'
+
 ];

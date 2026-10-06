@@ -39,15 +39,15 @@
     ];
 @endphp
 
-<div class="max-w-300 mx-auto py-24">
+<div id="practices" class="max-w-300 mx-auto py-30">
     <div class="max-w-180">
         <h2 class="text-[52px] leading-13 font-bold">{!! __('practices.title') !!}</h2>
         <div class="flex flex-col gap-3 mt-5 text-lg">{!! __('practices.description') !!}</div>
     </div>
-    <div class="grid grid-cols-3 gap-6 mt-9">
+    <div class="grid lg:grid-cols-3 gap-6 mt-9">
        @foreach ($items as $item)
             <div class="flex flex-col gap-4 min-h-75 border border-[#D9E4FF] p-8">
-                <div class="text-2xl font-medium">{{ $item['title'] }}</div>
+                <div class="text-3xl lg:text-2xl font-medium">{{ $item['title'] }}</div>
                 <div class="mt-auto ">{{ $item['description'] }}</div>
             </div>
         @endforeach

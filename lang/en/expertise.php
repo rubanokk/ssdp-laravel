@@ -2,7 +2,7 @@
 
 return [
     'title' => 'Our firm in numbers',
-    'value' => '$13bn+',
+    'value' => '$13bln+',
     'value_desc' => 'Value of projects advised on',
     'experience' => '20+',
     'experience_desc' => 'Years of legal experience',

@@ -5,11 +5,11 @@
                 <div class="uppercase font-bold">SSD PARTNERS</div>
             </a>
             <ul class="hidden lg:flex justify-center gap-10">
-                <li><a href="#">{!! __('common.practices') !!}</a></li>
-                <li><a href="#">{!! __('common.presence') !!}</a></li>
-                <li><a href="#">{!! __('common.expertise') !!}</a></li>
-                <li><a href="#">{!! __('common.publications') !!}</a></li>
-                <li><a href="#">{!! __('common.contacts') !!}</a></li>
+                <li><a href="/#practices">{!! __('common.practices') !!}</a></li>
+                <li><a href="/#presence">{!! __('common.presence') !!}</a></li>
+                <li><a href="/#expertise">{!! __('common.expertise') !!}</a></li>
+                <li><a href="/#publications">{!! __('common.publications') !!}</a></li>
+                <!-- <li><a href="#">{!! __('common.contacts') !!}</a></li> -->
             </ul>
         </div>
         <div class="flex items-center gap-7">
