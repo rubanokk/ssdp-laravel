@@ -10,11 +10,12 @@
         <div class="inline-flex items-center uppercase">
             TAMCHY • MUNICH • DUBAI • NEW YORK
         </div>
-        <h1  @class(["text-[80px] leading-21 font-semibold mt-4", 'max-w-200'=> app()->getLocale() === 'en', 'max-w-280'=> app()->getLocale() === 'ru'])>
+        <h1 @class(["text-[80px] leading-21 font-semibold mt-4", 'max-w-200'=> app()->getLocale() === 'en',
+            'max-w-280'=> app()->getLocale() === 'ru'])>
             {!! __('hero.title') !!}
         </h1>
-        <p class="max-w-180 mt-5 text-2xl">
-             {!! __('hero.description') !!}
+        <p class="max-w-180 mt-5 text-xl">
+            {!! __('hero.description') !!}
         </p>
         <img src="/images/hero.svg" alt="" class="absolute right-0 bottom-0">
     </div>

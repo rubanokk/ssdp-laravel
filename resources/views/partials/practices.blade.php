@@ -1,58 +1,54 @@
 @php
     $items = [
         [
-            'title' => 'Corporate & MA',
-            'description' => 'Private deals, acquisitions, exits, restructurings, joint ventures and governance for businesses and investors operating across multiple jurisdictions.',
+            'title' => __('practices.corporate'),
+            'description' => __('practices.corporate_desc'),
         ],
         [
-            'title' => 'Banking & Finance',
-            'description' => 'Acquisition, corporate and structured finance, debt arrangements, refinancing and strategic capital solutions for borrowers, lenders, sponsors and investors.',
+            'title' => __('practices.banking'),
+            'description' => __('practices.banking_desc'),
         ],
         [
-            'title' => 'Real Estate & Infrastructure',
-            'description' => 'Acquisitions, disposals, development projects, joint ventures, financing structures and complex real estate and infrastructure investments.',
+            'title' => __('practices.estate'),
+            'description' => __('practices.estate_desc'),
         ],
         [
-            'title' => 'Private Capital & Special Situations',
-            'description' => 'Advisory for principals, family capital, founders and investors in sensitive transactions, distressed situations and complex asset structures.',
+            'title' => __('practices.capital'),
+            'description' => __('practices.capital_desc'),
         ],
         [
-            'title' => 'Investment Funds & Asset Management',
-            'description' => 'Fund formation, investment structures, asset management mandates, family office arrangements and regulatory matters for managers and institutional investors.',
+            'title' => __('practices.investment'),
+            'description' => __('practices.investment_desc'),
         ],
         [
-            'title' => 'Digital Assets & FinTech',
-            'description' => 'Legal architecture for digital assets, custody models, tokenisation, payment infrastructure and emerging financial technologies.',
+            'title' => __('practices.digital'),
+            'description' => __('practices.digital_desc'),
         ],
         [
-            'title' => 'Regulatory & Compliance',
-            'description' => 'Licensing, AML/KYC, sanctions, financial regulation and governance frameworks for businesses operating in regulated environments.',
+            'title' => __('practices.regulatory'),
+            'description' => __('practices.regulatory_desc'),
         ],
         [
-            'title' => 'Intellectual Property',
-            'description' => 'We advise on the creation and protection of intellectual property, structuring ownership and commercial arrangements to support our clients’ business objectives.',
+            'title' => __('practices.intellectual'),
+            'description' => __('practices.intellectual_desc'),
         ],
         [
-            'title' => 'Disputes & Resolution',
-            'description' => 'Commercial disputes, enforcement strategy, negotiation and risk management with a board-level mindset and cross-border coordination.',
+            'title' => __('practices.disputes'),
+            'description' => __('practices.disputes_desc'),
         ],
     ];
 @endphp
 
 <div class="max-w-300 mx-auto py-24">
     <div class="max-w-180">
-        <h2 class="text-[52px] leading-13 font-bold">Practices for complex cross-border mandates.</h2>
-        <p class="mt-5 text-lg">SSD Partners advises principals, founders, investors, boards and senior
-            executives through focused practices where legal precision must be aligned with commercial strategy, capital
-            structuring, regulatory exposure and risk control.</p>
-        <p class="mt-3 text-lg">We focus on high-value mandates that require senior judgment, discretion and the
-            ability to coordinate work across jurisdictions, financial systems and stakeholder groups.</p>
+        <h2 class="text-[52px] leading-13 font-bold">{!! __('practices.title') !!}</h2>
+        <div class="flex flex-col gap-3 mt-5 text-lg">{!! __('practices.description') !!}</div>
     </div>
     <div class="grid grid-cols-3 gap-6 mt-9">
        @foreach ($items as $item)
-            <div class="flex flex-col h-75 border border-[#D9E4FF] p-8">
+            <div class="flex flex-col gap-4 min-h-75 border border-[#D9E4FF] p-8">
                 <div class="text-2xl font-medium">{{ $item['title'] }}</div>
-                <div class="mt-auto text-lg">{{ $item['description'] }}</div>
+                <div class="mt-auto ">{{ $item['description'] }}</div>
             </div>
         @endforeach
     </div>

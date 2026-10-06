@@ -1,20 +1,20 @@
 @php
     $items = [
         [
-            'title' => 'Tamchy, Kyrgyzstan',
-            'description' => 'A financial and investment hub on the shores of Lake Issyk-Kul, giving the brand a distinctive regional anchor and institutional context.',
+            'title' => __('presence.tamchy'),
+            'description' => __('presence.tamchy_desc'),
         ],
         [
-            'title' => 'Munich, Germany',
-            'description' => 'Positioned as the European hub for sophisticated cross-border transactions, regulatory strategy and premium advisory work.',
+            'title' => __('presence.munich'),
+            'description' => __('presence.munich_desc'),
         ],
         [
-            'title' => 'Dubai, UAE',
-            'description' => "Supporting regional expansion, high-growth ventures and cross-border business into the Gulf and beyond.",
+            'title' => __('presence.dubai'),
+            'description' => __('presence.dubai_desc'),
         ],
         [
-            'title' => 'New York, USA',
-            'description' => "A key U.S. financial centre that reinforces the firm's global positioning across capital, disputes and strategic transactions.",
+            'title' => __('presence.newyork'),
+            'description' => __('presence.newyork_desc'),
         ],
     ];
 @endphp
@@ -23,8 +23,8 @@
 
 <div class="max-w-300 mx-auto py-24">
     <div class="max-w-245">
-        <h2 class="text-[52px] leading-13 font-bold">Global presence</h2>
-        <p class="mt-5 text-lg">Through our trusted partner network, SSD Partners is also ready to represent clients’ interests across a broad range of jurisdictions. Coverage may include legal coordination, local counsel management, regulatory interaction and transaction support.</p>
+        <h2 class="text-[52px] leading-13 font-bold"> {!! __('presence.title') !!}</h2>
+        <p class="mt-5 text-lg">{!! __('presence.description') !!}</p>
     </div>
     <div class="grid grid-cols-4 gap-6 mt-9">
        @foreach ($items as $item)

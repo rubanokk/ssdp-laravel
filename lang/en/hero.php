@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'title' => 'Cross-border <span class="text-[#004AFF]">legal</span> strategy with global <span class="text-[#004AFF]">perspective</span>.',
-    'description' => 'We advise founders, corporates, investors and family offices on transactions, disputes and strategic growth across key financial centres.',
+    'title' => 'Legal strategy with <span class="text-[#004AFF]">global perspective</span>',
+    'description' => 'SSD Partners combines international deal assistance experience with a premium, business-first approach. We advise founders, corporates, investors and family offices on transactions, disputes and strategic growth across key financial centres',
 ];
